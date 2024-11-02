@@ -6,7 +6,8 @@
 /out-tsc
 /bazel-out
 
-# Node
+# Node modules
+node_modules/
 /node_modules
 npm-debug.log
 yarn-error.log
@@ -40,3 +41,22 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Angular build outputs
+dist/
+out-tsc/
+
+# Environment files
+src/environments/
+
+# Compiled files
+*.js
+*.js.map
+*.css
+*.css.map
+
+# IDE and system files
+.DS_Store
+.idea/
+.vscode/
+*.log
