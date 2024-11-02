@@ -1,67 +1,332 @@
-<!-- Componente de Login -->
-<div class="bg-gradient-to-b from-[#33A3AA] to-[#107076] flex justify-center items-center h-screen">
-  <!-- Izquierda: Imagen -->
-  <div class="w-1/2 h-screen hidden lg:block">
-      <img src="assets/img/DMonitoreo.png" alt="Imagen de fondo" class="object-cover w-full h-full">
-  </div>
-  
-  <!-- Derecha: Formulario de Login -->
-  <div class="lg:p-36 md:p-52 sm:p-20 p-8 w-full lg:w-1/2 bg-white rounded-md shadow-lg">
-      <h1 class="text-2xl font-semibold mb-4 text-gray-900">Portal de Monitoreo</h1>
-      <h1 class="text-2xl font-semibold mb-4 text-gray-800">Iniciar Sesión</h1>
-      <form action="#" method="POST">
-          <!-- Input de Email -->
-          <div class="mb-4">
-              <label for="email" class="block text-gray-800">Email</label>
-              <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-md py-2 px-3 focus:outline-none focus:border-blue-500" autocomplete="off">
-          </div>
-          
-          <!-- Input de Password con Icono para Mostrar/Ocultar -->
-          <div class="mb-4 relative">
-              <label for="password" class="block text-gray-800">Password</label>
-              <input type="password" id="password" name="password" class="w-full border border-gray-300 rounded-md py-2 px-3 pr-10 focus:outline-none focus:border-blue-500" autocomplete="off">
-              <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 right-3 flex items-center text-gray-500">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-6 w-6">
-                      <path id="eyeIcon" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                      <path id="eyeSlashIcon" style="display:none;" d="M3.98 8.34A10.451 10.451 0 0112 4.5c3.14 0 5.978 1.293 8.02 3.34M15.51 15.51l-1.49 1.49a3.502 3.502 0 01-5.02 0l-1.5-1.5M8.5 8.5L4.5 4.5m15 15l-4-4m0 0a7.502 7.502 0 01-5.02-2.5M12 20.5c-3.134 0-5.972-1.295-8.015-3.337" />
-                  </svg>
-              </button>
-          </div>
-          
-          <!-- Enlace para Recuperar Contraseña -->
-          <div class="mb-2 text-[#107076]">
-              <a href="#" class="hover:underline">¿Olvidaste tu contraseña?</a>
-              <button type="submit" class="bg-gradient-to-b from-[#33A3AA] to-[#107076] hover:from-[#107076] hover:to-[#33A3AA] text-white font-semibold rounded-md py-2 px-4 w-full">Inicia Sesión</button>
-          </div>
-      </form>
-      
-      <!-- Enlace para Registrarse -->
-      <div class="mt-6 text-center text-white">
-          <a href="#" class="hover:underline">Sign up Here</a>
-      </div>
 
-      <!--footer -->
-      <div>
-          <input type="checkbox" id="remember" name="remember" class="text-[#33A3AA]-500">
-          <p for="remember" class="text-gray-700 ml-2">Protegido por reCAPTCHA y sujeto a la Política de Privacidad y Condiciones.</p>
-      </div>
-  </div>
-</div>
+<div class="mt-12">
+        <div class="mb-12 grid gap-y-10 gap-x-6 md:grid-cols-2 xl:grid-cols-4">
+                    <!-- Primer Elemento -->
+                    <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                        <p class="text-black-300 text-sm font-medium leading-4">Lecturas Ok</p>
+                        <div class="flex flex-row space-x-4 justify-between">
+                            <div id="stats-1">
+                                <p class="text-black font-bold text-2xl inline-flex items-center space-x-2">1.234</p>
+                            </div>
+                            <!-- Logo modificado -->
+                            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="green" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2 12l5 5L22 5" />
+                                </svg>
+                            </div>
+                        </div>                        
+                    </div>
+            
+                    <!-- Segundo Elemento -->
+                    <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                        <p class="text-black-300 text-sm font-medium leading-4">Alertas medias</p>
+                        <div class="flex flex-row space-x-4 justify-between">
+                            <div id="stats-1">
+                                <p class="text-black font-bold text-2xl inline-flex items-center space-x-2">932</p>
+                            </div>
+                            <!-- Logo modificado -->
+                            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-100">
+                                <i class='fas fa-exclamation' style='font-size:28px; color: yellow;'></i>
+                            </div>
+                        </div>                        
+                    </div>
+            
+                    <!-- Tercer Elemento -->
+                    <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                        <p class="text-black-300 text-sm font-medium leading-4">Alertas rojas</p>
+                        <div class="flex flex-row space-x-4 justify-between">
+                            <div id="stats-1">
+                                <p class="text-black font-bold text-2xl inline-flex items-center space-x-2">932</p>
+                            </div>
+                            <!-- Logo modificado -->
+                            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-red-500">
+                               <i class='fa-solid fa-triangle-exclamation' style='font-size:28px; color: rgb(241, 126, 126)'></i>
+                            </div>
+                        </div> 
+                    </div>
+            
+                    <!-- Cuarto Elemento -->
+                    <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                        <p class="text-black-300 text-sm font-medium leading-4">Alertas deshabilitadas</p>
+                        <div class="flex flex-row space-x-4 justify-between">
+                            <div id="stats-1">
+                                <p class="text-black font-bold text-2xl inline-flex items-center space-x-2">932</p>
+                            </div>
+                            <!-- Logo modificado -->
+                            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-orange-300">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            
+        <div id="last-users" class="p-1">
+            <div class="flex items-center space-x-4 mb-2">
+                <h1 class="font-bold text-lg">Plantas</h1>
+                <button type="button" class="text-gray-500 font-bold border border-solid border-gray-500 px-1 py-1 rounded">+ Crear Nueva Planta</button>
+            </div>
+            <table class="w-full table-auto">
+            <thead class="text-gray-500">
+                <tr>
+                    <th class="text-left py-3 px-2 rounded-l-lg">Pais</th>
+                    <th class="text-left py-3 px-2">Nombre de la Planta</th>
+                    <th class="text-left py-3 px-2">Lecturas</th>
+                    <th class="text-left py-3 px-2">Alertas medias</th>
+                    <th class="text-left py-3 px-2">Alertas bajas</th>
+                    <th class="text-left py-3 px-2">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="py-3 px-2 font-bold">
+                        <div class="inline-flex space-x-3 items-center">
+                            <span>Banderas</span>
+                        </div>
+                    </td>
+                    <td class="py-3 px-2">Quilmes</td>
+                    <td class="py-3 px-2">300</td>
+                    <td class="py-3 px-2">10</td>
+                    <td class="py-3 px-2">2</td>
+                    <td class="py-3 px-2 flex justify-center items-center">
+                        <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <!-- <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg" alt=""></span> -->
+                                    <span>Banderas</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">Zarate</td>
+                            <td class="py-3 px-2">100</td>
+                            <td class="py-3 px-2">15</td>
+                            <td class="py-3 px-2">2</td>
+                            <td class="py-3 px-2 flex justify-center items-center">
+                                <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <!-- <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg" alt=""></span> -->
+                                    <span>Banderas</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">Sao Pablo</td>
+                            <td class="py-3 px-2">100</td>
+                            <td class="py-3 px-2">15</td>
+                            <td class="py-3 px-2">2</td>
+                            <td class="py-3 px-2 flex justify-center items-center">
+                                <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <!-- <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/niCVbIBAm4hahzwS83HoEtcVEIactkKohOzgXWYY4lM/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTk4ODczLmpwZw.jpg" alt=""></span> -->
+                                    <span>Banderas</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">Asunción</td>
+                            <td class="py-3 px-2">100</td>
+                            <td class="py-3 px-2">15</td>
+                            <td class="py-3 px-2">2</td>
+                                <td class="py-3 px-2 flex justify-center items-center">
+                                    <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-2 font-bold">
+                                <div class="inline-flex space-x-3 items-center">
+                                    <!-- <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/f_xU7q780YXiKG7IwKVV05eU6Sj2nIodEkN1S8GyM2M/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDk2MTc4LmpwZw.jpg" alt=""></span> -->
+                                    <span>Banderas</span>
+                                </div>
+                            </td>
+                            <td class="py-3 px-2">Montevideo</td>
+                            <td class="py-3 px-2">100</td>
+                            <td class="py-3 px-2">15</td>
+                            <td class="py-3 px-2">2</td>
+                            <td class="py-3 px-2 flex justify-center items-center">
+                                <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
+                            </td>
+                        </tr>
+                        
+                    </table>
+                </div>
+           
 
-<script>
-  function togglePasswordVisibility() {
-      const passwordField = document.getElementById("password");
-      const eyeIcon = document.getElementById("eyeIcon");
-      const eyeSlashIcon = document.getElementById("eyeSlashIcon");
-      
-      if (passwordField.type === "password") {
-          passwordField.type = "text";
-          eyeIcon.style.display = "none";
-          eyeSlashIcon.style.display = "block";
-      } else {
-          passwordField.type = "password";
-          eyeIcon.style.display = "block";
-          eyeSlashIcon.style.display = "none";
-      }
-  }
-</script>
+            <div class="mt-12">
+                <div class="mb-12 grid gap-y-10 gap-x-6 md:grid-cols-2 xl:grid-cols-4">
+                            <!-- Primer Elemento -->
+                            <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                                <p class="text-black-300 text-sm font-medium leading-4">Temperatura</p>
+                                <div class="flex flex-row space-x-4 justify-between">
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">100</p>
+                                    </div>
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">20</p>
+                                    </div>
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">3</p>
+                                    </div>
+                                    <!-- Logo modificado -->
+                                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="green" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M2 12l5 5L22 5" />
+                                        </svg>
+                                    </div>
+                                </div>                        
+                            </div>
+                    
+                            <!-- Segundo Elemento -->
+                            <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                                <p class="text-black-300 text-sm font-medium leading-4">Presión</p>
+                                <div class="flex flex-row space-x-4 justify-between">
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">100</p>
+                                    </div>
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">20</p>
+                                    </div>
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">3</p>
+                                    </div>
+                                    <!-- Logo modificado -->
+                                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-100">
+                                        <i class='fas fa-exclamation' style='font-size:28px; color: yellow;'></i>
+                                    </div>
+                                </div>                        
+                            </div>
+                    
+                            <!-- Tercer Elemento -->
+                            <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                                <p class="text-black-300 text-sm font-medium leading-4">Viento</p>
+                                <div class="flex flex-row space-x-4 justify-between">
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">100</p>
+                                    </div>
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">20</p>
+                                    </div>
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">3</p>
+                                    </div>
+                                    <!-- Logo modificado -->
+                                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-red-500">
+                                       <i class='fa-solid fa-triangle-exclamation' style='font-size:28px; color: rgb(241, 126, 126)'></i>
+                                    </div>
+                                </div> 
+                            </div>
+                    
+                            <!-- Cuarto Elemento -->
+                            <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                                <p class="text-black-300 text-sm font-medium leading-4">Niveles</p>
+                                <div class="flex flex-row space-x-4 justify-between">
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">100</p>
+                                    </div>
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">20</p>
+                                    </div>
+                                    <div id="stats-1">
+                                        <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">3</p>
+                                    </div>
+                                    <!-- Logo modificado -->
+                                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-orange-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </div>
+                                </div> 
+                            </div>
+
+                                                        <!-- Primer Elemento -->
+                                                        <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                                                            <p class="text-black-300 text-sm font-medium leading-4">Energía</p>
+                                                            <div class="flex flex-row space-x-4 justify-between">
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">100</p>
+                                                                </div>
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">20</p>
+                                                                </div>
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">3</p>
+                                                                </div>
+                                                               <!-- Logo modificado -->
+                                                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-300">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="green" class="w-6 h-6">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M2 12l5 5L22 5" />
+                                                                    </svg>
+                                                                </div>
+                                                            </div>                        
+                                                        </div>
+                                                
+                                                        <!-- Segundo Elemento -->
+                                                        <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                                                            <p class="text-black-300 text-sm font-medium leading-4">Tensión</p>
+                                                            <div class="flex flex-row space-x-4 justify-between">
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">100</p>
+                                                                </div>
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">20</p>
+                                                                </div>
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">3</p>
+                                                                </div>
+                                                                <!-- Logo modificado -->
+                                                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-yellow-100">
+                                                                    <i class='fas fa-exclamation' style='font-size:28px; color: yellow;'></i>
+                                                                </div>
+                                                            </div>                        
+                                                        </div>
+                                                
+                                                        <!-- Tercer Elemento -->
+                                                        <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                                                            <p class="text-black-300 text-sm font-medium leading-4">Monóxido de Carbono</p>
+                                                            <div class="flex flex-row space-x-4 justify-between">
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">100</p>
+                                                                </div>
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">20</p>
+                                                                </div>
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">3</p>
+                                                                </div>
+                                                                <!-- Logo modificado -->
+                                                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-red-500">
+                                                                   <i class='fa-solid fa-triangle-exclamation' style='font-size:28px; color: rgb(241, 126, 126)'></i>
+                                                                </div>
+                                                            </div> 
+                                                        </div>
+                                                
+                                                        <!-- Cuarto Elemento -->
+                                                        <div class="bg-slate-200/70 to-black/4 p-6 rounded-lg">
+                                                            <p class="text-black-300 text-sm font-medium leading-4">Otros gases</p>
+                                                            <div class="flex flex-row space-x-4 justify-between">
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">100</p>
+                                                                </div>
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">20</p>
+                                                                </div>
+                                                                <div id="stats-1">
+                                                                    <p class="text-black font-bold text-1xl inline-flex items-center space-x-2">3</p>
+                                                                </div>
+                                                                <!-- Logo modificado -->
+                                                                <div class="w-10 h-10 flex items-center justify-center rounded-full bg-orange-300">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                                                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                                                    </svg>
+                                                                </div>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+                                                </div>

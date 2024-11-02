@@ -1,20 +1,39 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-login-component',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [RouterOutlet, CommonModule, FormsModule],
   templateUrl: './login-component.html',
   styleUrl: './login-component.css'
 })
 export default class LoginComponent {
 
   imagePath: string = "images/DMonitoreo.png";
-  // imageWidth: string = '100%'; 
-  // imageHeight: string = '100%';
+  username: string = '';
+  password: string = '';
+  showPassword: boolean = false;
 
+  constructor(private router: Router) {}  // Inyecta el Router aquí
+
+  // Función para iniciar sesión y redirigir al dashboard
+  // Función para manejar el inicio de sesión
+  onLogin(...args: []) {
+    if (this.username === 'usuario1' && this.password === '1234') {
+      // Navega al dashboard si las credenciales son correctas
+      this.router.navigate(['/app/dashboard']);
+    } else {
+      alert('Usuario o contraseña incorrectos.');
+    }
+  }
+
+  // Función para mostrar u ocultar la contraseña
+  togglePasswordVisibility() {
+    this.showPassword = !this.showPassword;
+  }
   get backgroundStyle() {
     return {
       'background': `
