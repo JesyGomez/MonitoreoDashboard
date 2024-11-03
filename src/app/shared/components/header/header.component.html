@@ -1,42 +1,26 @@
-<nav class="flex items-center bg-background: rgba(233, 241, 244, 1) p-3 flex-wrap">
+<nav class="flex items-center p-3 flex-wrap">
   <a href="#" class="p-2 mr-4 inline-flex items-center">
-    <span class="text-3xl text-black font-bold  tracking-wide"
-      >Monitoreo Global</span
-    >
+    <span class="text-3xl text-black font-bold tracking-wide">Monitoreo Global</span>
   </a>
-  <div
-    class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
-    id="navigation"
-  >
-    <div
-      class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto"
-    >
-      <a
-        href="#"
-        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-      >
-      <i class="fa-solid fa-globe"></i>
-     </a>
-      <a
-        href="#"
-        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-      >
-      <i class="fa-solid fa-gear"></i>
+  <div class="flex-1 lg:hidden">
+    <button id="menu-btn" class="p-2 text-gray-700">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+  <div class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto" id="navigation">
+    <div class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto">
+      <a href="#" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-500 hover:text-white">
+        <i class="fa-solid fa-globe"></i>
       </a>
-      <a
-        href="#"
-        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-      >
-      <i class="fa-regular fa-bell"></i>
-     </a>
-      <a
-        href="#"
-        class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-900 hover:text-white"
-      >
-      <span class="text-xl text-black font-bold tracking-wide"
-      >Juan Rojas</span
-    >
-     </a>
-   </div>
+      <a href="#" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-500 hover:text-white">
+        <i class="fa-solid fa-gear"></i>
+      </a>
+      <a href="#" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-500 hover:text-white">
+        <i class="fa-regular fa-bell"></i>
+      </a>
+      <a href="#" class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-gray-400 items-center justify-center hover:bg-gray-400 hover:text-white">
+        <span class="text-xl text-black font-bold tracking-wide">Juan Rojas</span>
+      </a>
+    </div>
   </div>
 </nav>

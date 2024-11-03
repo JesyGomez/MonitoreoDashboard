@@ -17,10 +17,9 @@ export default class LoginComponent {
   password: string = '';
   showPassword: boolean = false;
 
-  constructor(private router: Router) {}  // Inyecta el Router aquí
+  constructor(private router: Router) {}  
 
   // Función para iniciar sesión y redirigir al dashboard
-  // Función para manejar el inicio de sesión
   onLogin(...args: []) {
     if (this.username === 'usuario1' && this.password === '1234') {
       // Navega al dashboard si las credenciales son correctas
@@ -39,11 +38,11 @@ export default class LoginComponent {
       'background': `
         linear-gradient(to bottom, rgba(51, 163, 170, 0.7), rgba(16, 112, 118, 0.7)),
         url(${this.imagePath})`,
-      'background-size': 'cover', // Cambia 'contain' a 'cover'
-      'background-position': 'right', // Cambia 'right' a 'center'
+      'background-size': 'cover', 
+      'background-position': 'right',
       'height': '100%',
       'width': '100%',
-      'background-repeat': 'no-repeat' // Asegúrate de que no se repita
+      'background-repeat': 'no-repeat'
     };
   }
 }

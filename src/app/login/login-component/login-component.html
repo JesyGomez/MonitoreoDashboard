@@ -43,29 +43,30 @@
           name="password" 
           class="w-full border border-gray-300 rounded-md py-2 px-3 pr-10 focus:outline-none focus:border-blue-500" 
           autocomplete="off">
-        <button type="button" (click)="togglePasswordVisibility()" class="absolute inset-y-0 right-3 flex items-center text-gray-500">
-          <svg *ngIf="!showPassword" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-6 w-6">
-            <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            <path d="M2.1 12a9.978 9.978 0 011.664-3.477 9.953 9.953 0 0114.431-1.784l-1.826 1.82" />
-          </svg>
-          <svg *ngIf="showPassword" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="h-6 w-6">
-            <path d="M3.98 8.34A10.451 10.451 0 0112 4.5c3.14 0 5.978 1.293 8.02 3.34M15.51 15.51l-1.49 1.49a3.502 3.502 0 01-5.02 0l-1.5-1.5M8.5 8.5L4.5 4.5m15 15l-4-4m0 0a7.502 7.502 0 01-5.02-2.5M12 20.5c-3.134 0-5.972-1.295-8.015-3.337" />
-          </svg>
+        <button type="button" (click)="togglePasswordVisibility()" class="absolute inset-y-0 right-3 flex items-center rounded-md p-5 text-gray-500">
+          <i *ngIf="!showPassword" class="fa-solid fa-eye"></i>
+          <i *ngIf="showPassword" class="fa-regular fa-eye"></i>
         </button>
       </div>
   
       <!-- Enlace y Botón de Inicio de Sesión -->
-      <div class="flex items-center mb-2">
+      <div class="flex justify-between items-center mb-2">
         <a href="#" class="hover:underline">¿Olvidaste tu contraseña?</a>
+        <button (click)="onLogin()" type="button" class="bg-gradient-to-b from-[#33A3AA] to-[#107076] hover:from-[#107076] hover:to-[#33A3AA] text-white font-semibold rounded-md py-1 px-2">
+          Inicia Sesión
+        </button>
       </div>
-      <button (click)="onLogin()" type="button" class="bg-gradient-to-b from-[#33A3AA] to-[#107076] hover:from-[#107076] hover:to-[#33A3AA] text-white font-semibold rounded-md py-1 px-2 w-full">
-        Inicia Sesión
-      </button>
+
+
     </form>
         <!-- Footer -->
-        <div class="mt-6 text-left text-gray-700">
-            <label for="remember">Protegido por reCAPTCHA y sujeto a la Política de Privacidad y Condiciones.</label>
-        </div>
+    <div class="mt-6 text-left text-gray-700">
+      <label for="remember">Protegido por reCAPTCHA y sujeto a la 
+          <a href="#" class="text-[#33A3AA] hover:underline">Política de Privacidad</a> y 
+          <a href="#" class="text-[#33A3AA] hover:underline">Condiciones</a>.
+      </label>
+    </div>
+
     </div>
 </div>
 
