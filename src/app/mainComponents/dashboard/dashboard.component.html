@@ -60,101 +60,144 @@
                     </div>
                 </div>
             
-            <div id="last-users" class="p-1.5 bg-white rounded-xl">
-                <div class="flex items-center space-x-4 mb-4 mt-4 ml-4">
-                    <h1 class="font-bold text-lg">Plantas</h1>
-                    <button type="button" class="text-gray-500 font-bold border border-solid border-gray-500 px-1 py-1 rounded">+ Crear Nueva Planta</button>
-                </div>
-                <table class="w-full table-auto">
-                <thead class="text-gray-500">
-                <tr>
-                    <th class="text-left py-3 px-2 rounded-l-lg">Pais</th>
-                    <th class="text-left py-3 px-2">Nombre de la Planta</th>
-                    <th class="text-left py-3 px-2">Lecturas</th>
-                    <th class="text-left py-3 px-2">Alertas medias</th>
-                    <th class="text-left py-3 px-2">Alertas bajas</th>
-                    <th class="text-left py-3 px-2">Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="py-3 px-2 font-bold">
-                        <div class="inline-flex space-x-3 items-center">
-                            <span>Banderas</span>
+                <div id="last-users" class="p-1.5 bg-white rounded-xl">
+                    <div class="flex items-center space-x-4 mb-4 mt-4 ml-4">
+                        <h1 class="font-bold text-lg">Plantas</h1>
+                        <div class="crear-nueva-btn">
+                            <button type="button" (click)="showCreatePlantForm()" class="text-gray-500 font-bold border border-solid border-gray-500 px-1 py-1 rounded">
+                                + Crear Nueva Planta
+                            </button>
                         </div>
-                    </td>
-                    <td class="py-3 px-2">Quilmes</td>
-                    <td class="py-3 px-2">300</td>
-                    <td class="py-3 px-2">10</td>
-                    <td class="py-3 px-2">2</td>
-                    <td class="py-3 px-2 flex justify-center items-center">
-                        <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
-                    </td>
-                </tr>
-                        <tr>
-                            <td class="py-3 px-2 font-bold">
-                                <div class="inline-flex space-x-3 items-center">
-                                    <!-- <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg" alt=""></span> -->
-                                    <span>Banderas</span>
-                                </div>
-                            </td>
-                            <td class="py-3 px-2">Zarate</td>
-                            <td class="py-3 px-2">100</td>
-                            <td class="py-3 px-2">15</td>
-                            <td class="py-3 px-2">2</td>
-                            <td class="py-3 px-2 flex justify-center items-center">
-                                <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-2 font-bold">
-                                <div class="inline-flex space-x-3 items-center">
-                                    <!-- <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/tGiLEDiAbS6NdHAXAjCfpKoW05x2nq70NGmxjxzT5aU/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/OTM4ODM1LmpwZw.jpg" alt=""></span> -->
-                                    <span>Banderas</span>
-                                </div>
-                            </td>
-                            <td class="py-3 px-2">Sao Pablo</td>
-                            <td class="py-3 px-2">100</td>
-                            <td class="py-3 px-2">15</td>
-                            <td class="py-3 px-2">2</td>
-                            <td class="py-3 px-2 flex justify-center items-center">
-                                <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-2 font-bold">
-                                <div class="inline-flex space-x-3 items-center">
-                                    <!-- <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/niCVbIBAm4hahzwS83HoEtcVEIactkKohOzgXWYY4lM/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NTk4ODczLmpwZw.jpg" alt=""></span> -->
-                                    <span>Banderas</span>
-                                </div>
-                            </td>
-                            <td class="py-3 px-2">Asunción</td>
-                            <td class="py-3 px-2">100</td>
-                            <td class="py-3 px-2">15</td>
-                            <td class="py-3 px-2">2</td>
-                                <td class="py-3 px-2 flex justify-center items-center">
-                                    <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
+                    </div>
+                    <table class="w-full table-auto justify-center items-center">
+                        <thead class="text-gray-500">
+                            <tr>
+                                <th class="text-left py-3 px-2 rounded-l-lg">País</th>
+                                <th class="text-left py-3 px-2">Nombre de la Planta</th>
+                                <th class="text-left py-3 px-2">Lecturas</th>
+                                <th class="text-left py-3 px-2">Alertas medias</th>
+                                <th class="text-left py-3 px-2">Alertas bajas</th>
+                                <th class="text-left py-3 px-2">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let planta of plantas">
+                                <td class="py-3 px-2 font-bold">{{ planta.pais }}</td>
+                                <td class="py-3 px-2">{{ planta.nombre }}</td>
+                                <td class="py-3 px-2">{{ planta.lecturas }}</td>
+                                <td class="py-3 px-2">{{ planta.alertasMedias }}</td>
+                                <td class="py-3 px-2">{{ planta.alertasRojas }}</td>
+                                <td class="py-3 px-2">
+                                    <button (click)="editPlanta(planta)">
+                                        <i class="fa-solid fa-ellipsis-vertical text-gray-500"></i>
+                                    </button>
                                 </td>
-                        </tr>
-                        <tr>
-                            <td class="py-3 px-2 font-bold">
-                                <div class="inline-flex space-x-3 items-center">
-                                    <!-- <span><img class="rounded-full w-8 h-8" src="https://images.generated.photos/f_xU7q780YXiKG7IwKVV05eU6Sj2nIodEkN1S8GyM2M/rs:fit:256:256/czM6Ly9pY29uczgu/Z3Bob3Rvcy1wcm9k/LnBob3Rvcy92M18w/NDk2MTc4LmpwZw.jpg" alt=""></span> -->
-                                    <span>Banderas</span>
-                                </div>
-                            </td>
-                            <td class="py-3 px-2">Montevideo</td>
-                            <td class="py-3 px-2">100</td>
-                            <td class="py-3 px-2">15</td>
-                            <td class="py-3 px-2">2</td>
-                            <td class="py-3 px-2 flex justify-center items-center">
-                                <button><i class="fa-solid fa-ellipsis-vertical text-gray-500"></i></button>
-                            </td>
-                        </tr>
-                    </table>
+                            </tr>
+                        </tbody>
+                        </table>
                 </div>
-           
+                
+                <!-- Modal de creación de planta centrado en el medio de la página -->
+                <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" *ngIf="isModalOpen && !isEditMode">
+                    <!-- Modal de creación de planta -->
+                    <div class="modal-box planta-bg bg-white rounded-xl max-w-md shadow-lg p-6">
+                                <!-- Título del modal -->
+                                <h1 class="text-black font-bold text-xl mt-3 mb-4">Crear nueva planta</h1>                
+                                <!-- Formulario de creación de planta -->
+                                <form class="grid grid-cols-2 gap-y-6 gap-x-4" (ngSubmit)="isEditMode ? editarPlanta($event) : agregarPlanta($event)">
+                                    <label class="col-span-1 text-gray-500">Nombre de la Planta:</label>
+                                    <input type="text" [(ngModel)]="selectedPlanta.nombre" [ngModelOptions]="{standalone: true}" placeholder="Nombre Planta" class="col-span-1 border border-gray-300 rounded-md p-2" required>
+                                    
+                                    <label class="col-span-1 text-gray-500">País:</label>
+                                    <select id="pais" name="pais" [(ngModel)]="selectedPlanta.pais" class="col-span-1 border border-gray-300 text-gray-500 rounded-md p-2" required>
+                                        <option value="">-- país --</option>
+                                        <option value="argentina">Argentina</option>
+                                        <option value="brasil">Brasil</option>
+                                        <option value="chile">Chile</option>
+                                        <option value="uruguay">Uruguay</option>
+                                        <option value="mexico">México</option>
+                                        <option value="colombia">Colombia</option>
+                                    </select>
+                                    <label class="col-span-1 text-gray-500">Cantidad de lecturas:</label>
+                                    <input type="text" [(ngModel)]="selectedPlanta.lecturas" [ngModelOptions]="{standalone: true}" placeholder="Nombre Planta" class="col-span-1 border border-gray-300 rounded-md p-2" required>
+                                
+                                    <label class="col-span-1 text-gray-500">Alertas medias:</label>
+                                    <input type="text" [(ngModel)]="selectedPlanta.alertasMedias" [ngModelOptions]="{standalone: true}" placeholder="Nombre Planta" class="col-span-1 border border-gray-300 rounded-md p-2" required>
+                                    
+                                    <div class="col-span-2 flex justify-center space-x-4 mt-4">
+                                        <button type="button" (click)="closeModal()" class="bg-white border border-green-900 text-green-900 font-semibold rounded-full py-2 px-4">
+                                            Cancelar
+                                        </button>
+                                        <button type="submit" class="bg-green-900 border border-green-900 text-white font-semibold rounded-full py-2 px-4">
+                                            {{ isEditMode ? 'Actualizar' : 'Crear' }}
+                                        </button>
+                                    </div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                
+                <!-- Modal de Edición de planta -->
+                <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" *ngIf="isModalOpen && isEditMode">
+                    <div class="modal-box planta-bg bg-white rounded-xl max-w-ml shadow-lg p-6">
+                        <h1 class="text-black font-bold text-xl mt-6 mb-4 text-center">Editar planta</h1>
+                        <!-- Formulario de edición -->
+                        <form class="grid gap-6 mb-6 lg:grid-cols-2" (ngSubmit)="isEditMode ? editarPlanta($event) : agregarPlanta($event)">
+                            <!-- Input Nombre de la Planta -->
+                            <div>
+                                <label for="nombre" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-600">Nombre de la Planta:</label>
+                                <input type="text" id="nombre" [(ngModel)]="selectedPlanta.nombre" name="nombre" placeholder="Nombre Planta" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-200 dark:placeholder-gray-600 dark:text-gray-900 dark:focus:ring-green-700 dark:focus:border-green-900" required>
+                            </div>
+                            <!-- Selección de País -->
+                            <div>
+                                <label for="pais" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-600">País:</label>
+                                <select id="pais" [(ngModel)]="selectedPlanta.pais" name="pais" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-200 dark:placeholder-gray-600 dark:text-gray-900 dark:focus:ring-green-700 dark:focus:border-green-900" required>
+                                    <option value="">-- país --</option>
+                                    <option value="argentina">Argentina</option>
+                                    <option value="brasil">Brasil</option>
+                                    <option value="chile">Chile</option>
+                                    <option value="uruguay">Uruguay</option>
+                                    <option value="mexico">México</option>
+                                    <option value="colombia">Colombia</option>
+                                </select>
+                            </div>
+                            <!-- Input Cantidad de lecturas -->
+                            <div>
+                                <label for="lecturas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-600">Cantidad de lecturas:</label>
+                                <input type="number" id="lecturas" [(ngModel)]="selectedPlanta.lecturas" name="lecturas" placeholder="Ingrese" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-200 dark:placeholder-gray-600 dark:text-gray-900 dark:focus:ring-green-700 dark:focus:border-green-900" required>
+                            </div>
+                            <!-- Input Cantidad de lecturas -->
+                            <div>
+                                <label for="lecturas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-600">Cantidad de lecturas:</label>
+                                <input type="number" id="lecturas" [(ngModel)]="selectedPlanta.lecturas" name="lecturas" placeholder="Ingrese" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-200 dark:placeholder-gray-600 dark:text-gray-900 dark:focus:ring-green-700 dark:focus:border-green-900" required>
+                            </div>
+                            <!-- Input Alertas Medias -->
+                            <div>
+                                <label for="alertasMedias" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-600">Alertas medias:</label>
+                                <input type="number" id="alertasMedias" [(ngModel)]="selectedPlanta.alertasMedias" name="alertasMedias" placeholder="Ingrese" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-200 dark:placeholder-gray-600 dark:text-gray-900 dark:focus:ring-green-700 dark:focus:border-green-900" required>
+                            </div>
 
+                            <!-- Input Alertas Rojas -->
+                            <div>
+                                <label for="alertasRojas" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-600">Alertas rojas:</label>
+                                <input type="number" id="alertasRojas" [(ngModel)]="selectedPlanta.alertasRojas" name="alertasRojas" placeholder="Ingrese" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-200 dark:border-gray-200 dark:placeholder-gray-600 dark:text-gray-900 dark:focus:ring-green-700 dark:focus:border-green-900" required>
+                            </div>
+                            <!-- Botones de acción en una fila completa -->
+                            <div class="col-span-2 flex justify-center space-x-4 mt-4">
+                                <!-- Botón Cancelar -->
+                                <button type="button" (click)="closeModal()" class="bg-white border border-green-900 text-green-900 font-semibold rounded-full py-2 px-4 hover:bg-green-100 hover:text-green-500 transition">
+                                    Cancelar
+                                </button>
+                                <!-- Botón Crear/Actualizar -->
+                                <button type="submit" class="bg-green-900 border border-green-900 text-white font-semibold rounded-full py-2 px-4 hover:bg-green-800 hover:text-green-500 transition">
+                                    {{ isEditMode ? 'Actualizar' : 'Crear' }}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                                    
                 <div class="mt-12">
                     <div class="mb-12 grid gap-y-10 gap-x-6 md:grid-cols-2 xl:grid-cols-4">
                         <!-- Primer Elemento -->
@@ -348,7 +391,7 @@
                                 <div id="stats-1" class="flex items-center space-x-2">
                                     <!-- Icono y Texto -->
                                     <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-b from-[#a8d3d5] to-[#a5c2c4]">
-                                        <i class="fa-solid fa-temperature-three-quarters" style="color: #33A3AA;"></i>
+                                        <i class='fa-solid fa-square-poll-vertical' style="color: #33A3AA;"></i>
                                     </div>
                                 </div>
                              </div>
@@ -427,7 +470,7 @@
                                     <div id="stats-1" class="flex items-center space-x-2">
                                         <!-- Icono y Texto -->
                                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-b from-[#a8d3d5] to-[#a5c2c4]">
-                                            <i class="fa-solid fa-wind" style="color: #33A3AA;"></i>
+                                            <i class="fa-solid fa-smog" style="color: #33A3AA;"></i>
                                         </div>
                                     </div>
                                  </div>
@@ -466,7 +509,7 @@
                                     <div id="stats-1" class="flex items-center space-x-2">
                                         <!-- Icono y Texto -->
                                         <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-b from-[#a8d3d5] to-[#a5c2c4]">
-                                            <i class="fa-solid fa-wind" style="color: #33A3AA;"></i>
+                                            <i class="fa-solid fa-cloud" style="color: #33A3AA;"></i>
                                         </div>
                                     </div>
                                  </div>

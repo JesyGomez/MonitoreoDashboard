@@ -43,8 +43,8 @@
           name="password" 
           class="w-full border border-gray-300 rounded-md py-2 px-3 pr-10 focus:outline-none focus:border-blue-500" 
           autocomplete="off">
-        <button type="button" (click)="togglePasswordVisibility()" class="absolute inset-y-0 right-3 flex items-center rounded-md p-5 text-gray-500">
-          <i *ngIf="!showPassword" class="fa-solid fa-eye"></i>
+        <button type="button" (click)="togglePasswordVisibility()" class="absolute inset-y-0 right-3 flex items-end rounded-md p-5 text-gray-500">
+          <i *ngIf="!showPassword" class="fa-solid fa-eye-slash"></i>
           <i *ngIf="showPassword" class="fa-regular fa-eye"></i>
         </button>
       </div>
