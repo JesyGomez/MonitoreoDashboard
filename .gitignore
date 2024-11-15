@@ -43,8 +43,8 @@ testem.log
 Thumbs.db
 
 # Angular build outputs
-dist/
-out-tsc/
+# dist/
+# out-tsc/
 
 # Environment files
 src/environments/

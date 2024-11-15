@@ -1,27 +1,54 @@
-# MonitoreoDashboard
+# Desafío Frontend: Aplicación de Monitoreo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+Este es un proyecto de frontend para una aplicación de monitoreo, desarrollado como parte de un desafío de desarrollo frontend. La aplicación permite a los usuarios registrarse, iniciar sesión y acceder a un dashboard con información dinámica.
 
-## Development server
+## Tecnologías utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular**: Framework principal para la construcción de la aplicación.
+- **TailwindCSS**: Utilizado para el diseño responsivo y estilización.
 
-## Code scaffolding
+## Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Pantalla de Login/Registro
 
-## Build
+#### Registro de usuario
+- Los usuarios pueden registrarse proporcionando la información necesaria.
+- La información se almacena correctamente (en este caso solo front-end, no se implementa el almacenamiento real, pero se simula).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#### Inicio de sesión
+- Los usuarios pueden iniciar sesión con las credenciales registradas.
+- En caso de éxito, son redirigidos al **Dashboard**.
+- Se utiliza un **Guard** de Angular para proteger las rutas y asegurar que solo los usuarios autenticados puedan acceder al dashboard.
 
-## Running unit tests
+### Pantalla de Dashboard
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Sección de Tarjetas Dinámicas
+- Se renderizan tarjetas dinámicas con información obtenida desde una API o archivos JSON.
 
-## Running end-to-end tests
+#### Tabla con información del backend
+- La tabla muestra datos provenientes del backend o archivos JSON.
+- Permite acciones como ordenar, filtrar o buscar la información (dependiendo de los datos disponibles).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Navegación y Diseño
 
-## Further help
+#### Navbar y Sidenav
+- El **Navbar** muestra la información del usuario logueado, como nombre y avatar.
+- El **Sidenav** contiene enlaces funcionales a las diferentes secciones del dashboard.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+#### Diseño Responsivo
+- La aplicación está completamente funcional en dispositivos móviles, tablets y escritorios.
+- Se utiliza **TailwindCSS** para lograr un diseño atractivo y responsivo.
+
+## Seguridad y Validaciones
+
+### Seguridad en la autenticación
+- Se maneja correctamente la sesión de los usuarios para evitar accesos no autorizados.
+
+### Validaciones de formularios
+- Se realizan validaciones adecuadas en los formularios de **registro** y **login** para prevenir datos incorrectos o maliciosos.
+
+## Instalación
+
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/JesyGomez/MonitoreoDashboard.git
