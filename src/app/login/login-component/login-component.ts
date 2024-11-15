@@ -8,7 +8,7 @@ import { Router, RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [RouterOutlet, CommonModule, FormsModule],
   templateUrl: './login-component.html',
-  styleUrl: './login-component.css'
+  styleUrls: ['./login-component.css']
 })
 export default class LoginComponent {
 
