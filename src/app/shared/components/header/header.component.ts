@@ -5,7 +5,6 @@ import { Component, EventEmitter, Output } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
 })
 export class HeadComponent {
   @Output() toggleSidebar = new EventEmitter<void>();

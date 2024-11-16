@@ -7,7 +7,6 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [FormsModule, NgIf, NgFor],
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
 })
 export default class DashboardComponent {
   isModalOpen = false; 

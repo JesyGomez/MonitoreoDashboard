@@ -10,7 +10,6 @@ import { NgClass } from '@angular/common';
   standalone: true,
   imports: [HeadComponent, SidebarComponent, FooterComponent, RouterOutlet, NgClass,],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.css'
 })
 export default class LayoutComponent {
   
